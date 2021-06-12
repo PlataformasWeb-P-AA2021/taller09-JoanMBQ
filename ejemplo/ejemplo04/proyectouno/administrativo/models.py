@@ -32,8 +32,11 @@ class Estudiante(models.Model):
 
 
 class Modulo(models.Model):
-    """
-    """
+    
+    class Meta:
+        ordering = ["nombre"]
+        verbose_name_plural = "Los Modulos"
+
     opciones_modulo = (
         ('1', 'Primero'),
         ('2', 'Segundo'),
